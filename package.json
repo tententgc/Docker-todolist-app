@@ -1,0 +1,27 @@
+{
+  "name": "dockerized-todo-list-app-with-kubernetes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tententgc/Dockerized-Todo-List-App-with-Kubernetes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tententgc/Dockerized-Todo-List-App-with-Kubernetes/issues"
+  },
+  "homepage": "https://github.com/tententgc/Dockerized-Todo-List-App-with-Kubernetes#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.4",
+    "nodemon": "^2.0.22"
+  }
+}
