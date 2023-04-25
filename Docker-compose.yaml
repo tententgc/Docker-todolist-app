@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    image: 72ee924ef282001ea343d1c0d067e47803cd5c1d2e3bfffa07c538471fc97c5c
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  backend:
+    image: babaa5e8cdf8aea9383567857e843616c6debfb9954358913a1eedcd1670bc81
+    ports:
+      - "8120:8120"
+    environment:
+      - PORT = 8120
+      - MONGO_URL = 'mongodb+srv://tententgc:tenten2546@os-project.s4cynb3.mongodb.net/?retryWrites=true&w=majority'
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
