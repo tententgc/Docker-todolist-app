@@ -7,8 +7,7 @@ services:
     depends_on:
       - backend
   backend:
-    build: ./backend
-    image: 8a834de4267532bba4be46b26b4db6e5e68fdb9c3be9ab3456875a1749c9f9ae
+    image: faadb50a2ca9b8f4f13e6ba45f80894540667152c9cda2b97d09a99423277aa7
     ports:
       - "8120:8120"
     environment:
