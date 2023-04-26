@@ -1,13 +1,13 @@
 version: '3'
 services:
   frontend:
-    image: 72ee924ef282001ea343d1c0d067e47803cd5c1d2e3bfffa07c538471fc97c5c
+    image:  d21daf4340874b5b2bf858de0b4267ed3a1b7d29925456d2c9fb3d7470489391
     ports:
       - "3000:3000"
     depends_on:
       - backend
   backend:
-    image: babaa5e8cdf8aea9383567857e843616c6debfb9954358913a1eedcd1670bc81
+    image: faadb50a2ca9b8f4f13e6ba45f80894540667152c9cda2b97d09a99423277aa7
     ports:
       - "8120:8120"
     environment:
