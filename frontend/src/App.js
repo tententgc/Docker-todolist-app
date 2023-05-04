@@ -11,7 +11,7 @@ function App() {
   const [isUpdating, setUpdating] = useState("");
 
   useEffect(() => {
-    axios.get("/get-todo")
+    axios.get("http://localhost:30000/get-todo")
       .then((res) => setTodo(res.data))
       .catch((err) => console.log(err));
   })
@@ -19,14 +19,14 @@ function App() {
   const addUpdateTodo = () => {
 
     if (isUpdating === "") {
-      axios.post("http://127.0.0.1:53185/save-todo", { text })
+      axios.post("http://localhost:30000/save-todo", { text })
         .then((res) => {
           console.log(res.data);
           setText("");
         })
         .catch((err) => console.log(err));
     }else{
-      axios.post("http://127.0.0.1:53185/update-todo", { _id: isUpdating, text })
+      axios.post("http://localhost:30000/update-todo", { _id: isUpdating, text })
         .then((res) => {
           console.log(res.data);
           setText("");
@@ -37,7 +37,7 @@ function App() {
   }
 
   const deleteTodo = (_id) => {
-    axios.post("http://127.0.0.1:53185/delete-todo", { _id })
+    axios.post("http://localhost:30000/delete-todo", { _id })
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   }
