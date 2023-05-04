@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: 1010140246/os-backend-3232:lastest
+          ports:
+            - containerPort: 8120
+          env:
+            - name: PORT
+              value: "8120"
+            - name: MONGO_URL
+              value: "mongodb+srv://tententgc:tenten2546@os-project.s4cynb3.mongodb.net/?retryWrites=true&w=majority"
+      imagePullSecrets:
+        - name: my-dockerhub-secret
