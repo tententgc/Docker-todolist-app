@@ -9,4 +9,5 @@ spec:
     - name: http
       port: 8120
       targetPort: 8120
-  type: LoadBalancer
+      nodePort: 30000
+  type: NodePort
