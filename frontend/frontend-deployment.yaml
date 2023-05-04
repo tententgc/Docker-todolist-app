@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: d21daf4340874b5b2bf858de0b4267ed3a1b7d29925456d2c9fb3d7470489391
+          image: 1010140246/os-frontend:lastest
           ports:
             - containerPort: 3000
+          
