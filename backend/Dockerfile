@@ -6,7 +6,7 @@ ENV NODE_VERSION 20.0.0
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the container
+#copy all data such as file package*.json and allfile js to /app
 COPY package*.json ./
 COPY ./**/*.js ./
 
