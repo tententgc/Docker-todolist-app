@@ -11,22 +11,22 @@ function App() {
   const [isUpdating, setUpdating] = useState("");
 
   useEffect(() => {
-    axios.get("http://20.198.136.40:8120/get-todo")
+    axios.get(`${process.env.REACT_APP_API_BASE_URL}/get-todo`)
       .then((res) => setTodo(res.data))
       .catch((err) => console.log(err));
-  })
+  }, []);
 
   const addUpdateTodo = () => {
 
     if (isUpdating === "") {
-      axios.post(`http://20.198.136.40:8120/save-todo`, { text })
+      axios.post(`${process.env.REACT_APP_API_BASE_URL}/save-todo`, { text })
         .then((res) => {
           console.log(res.data);
           setText("");
         })
         .catch((err) => console.log(err));
-    }else{
-      axios.post(`http://20.198.136.40:8120/update-todo`, { _id: isUpdating, text })
+    } else {
+      axios.post(`${process.env.REACT_APP_API_BASE_URL}/update-todo`, { _id: isUpdating, text })
         .then((res) => {
           console.log(res.data);
           setText("");
@@ -37,7 +37,7 @@ function App() {
   }
 
   const deleteTodo = (_id) => {
-    axios.post(`http://20.198.136.40:8120/delete-todo`, { _id })
+    axios.post(`${process.env.REACT_APP_API_BASE_URL}/delete-todo`, { _id })
       .then((res) => console.log(res.data))
       .catch((err) => console.log(err));
   }

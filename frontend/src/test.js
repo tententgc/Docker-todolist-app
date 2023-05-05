@@ -1,1 +1,1 @@
-console.log(`${process.env.BASE_URL }/update-todo`)
+console.log(`${process.env.REACT_APP_API_BASE_URL}/get-todo`)
