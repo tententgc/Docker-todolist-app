@@ -79,7 +79,20 @@ spec:
             - name: PORT
               value: "8120"
             - name: MONGO_URL
-              value: "mongodb+srv://tententgc:tenten2546@os-project.s4cynb3.mongodb.net/?retryWrites=true&w=majority"
+              valueFrom:
+                configMapKeyRef:
+                  name: mongo-config
+                  key: MONGO_URL
+            - name: MONGO_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: MONGO_USERNAME
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-secret
+                  key: MONGO_PASSWORD
       imagePullSecrets:
         - name: my-dockerhub-secret
 
