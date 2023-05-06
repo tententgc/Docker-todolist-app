@@ -14,6 +14,8 @@ Before you can deploy this application, you'll need to have the following softwa
 
 ## Getting Started
 
+if you need use in localhost I recommended to use Tententgc-edit Branch
+
 To get started with this application, follow these steps:
 
 1. Clone the repository:
@@ -22,11 +24,40 @@ To get started with this application, follow these steps:
    git clone https://github.com/tententgc/Dockerized-Todo-List-App-with-Kubernetes.git
    ```
 
-2. Build the Docker image:
+2. Build the Docker image (Optional) when you want to create to use your own API :
+
+  frontend
+   ```
+   cd frontend
+   ```
+    make .env file 
+   ```
+      REACT_APP_API_BASE_URL=<Backend ip>
+   ```
 
    ```
-   docker build -t todo-list-app .
+   docker build docker build -t <imagename>  --platform linux/amd64 .  
    ```
+  
+  backend
+   ```
+   cd frontend
+
+   ```
+    make .env file 
+   ```
+
+      PORT = 8120
+      MONGO_URL = 'mongo_url'
+
+   ```
+
+   ```
+
+   docker build docker build -t <imagename>  --platform linux/amd64 .  
+
+   ```
+
 
 3. Deploy the application to Kubernetes:
 
