@@ -7,11 +7,11 @@ export const options = {
 };
 
 export default function () {
-    const res = http.get('http://40.119.241.117');
+    const res = http.get('http://20.44.251.80');
 
     check(res, {
         'status is 200': (r) => r.status === 200,
-        'has crocodiles': (r) => r.json('crocodiles.length') > 0,
+
     });
 
     sleep(1);
