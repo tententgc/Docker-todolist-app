@@ -40,7 +40,6 @@ To get started with this application, follow these steps:
    This will create a Kubernetes deployment with one pod running the Todo List application.
 
 
-1. Access the application:
 
    You can access the Todo List application by navigating to the IP address of the Kubernetes service. For example:
 
