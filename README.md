@@ -21,7 +21,7 @@ To get started with this application, follow these steps:
 1. Clone the repository:
 
    ```
-   git clone https://github.com/tententgc/Dockerized-Todo-List-App-with-Kubernetes.git
+      https://github.com/tententgc/k8s-todolist.git
    ```
 
 2. Build the Docker image (Optional) when you want to create to use your own API :
