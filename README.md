@@ -41,7 +41,7 @@ To get started with this application, follow these steps:
   
   backend
    ```
-   cd frontend
+   cd backend
 
    ```
     make .env file 
@@ -67,6 +67,12 @@ To get started with this application, follow these steps:
     kubectl apply -f os-deployment.yaml
     kubectl apply -f os-service.yaml
    ```
+
+  When your use your own image or edit please edit image name
+
+  ```
+   image: 1010140246/os-backend-amd64:latest
+  ```
 
    This will create a Kubernetes deployment with one pod running the Todo List application.
 
